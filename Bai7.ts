@@ -1,6 +1,6 @@
-type MyCallback<T> = (element: T, index: number, array: T[]) => void;
+type MyCallback = (element: number, index: number, array: number[]) => void;
 
-function myForEach<T>(arr: T[], callback: MyCallback<T>): void {
+function myForEach(arr: number[], callback: MyCallback): void {
   for (let i = 0; i < arr.length; i++) {
     callback(arr[i], i, arr);
   }

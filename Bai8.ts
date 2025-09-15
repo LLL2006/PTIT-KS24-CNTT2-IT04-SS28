@@ -1,16 +1,16 @@
-type MyFilterCallback<T> = (
-  element: T,
-  searchValue: T,
+type MyFilterCallback = (
+  element: number,
+  searchValue: number,
   index: number,
-  array: T[]
+  array: number[]
 ) => boolean;
 
 function myFilter<T>(
-  arr: T[],
-  searchValue: T,
-  callback: MyFilterCallback<T>
-): T[] {
-  const result: T[] = [];
+  arr: number[],
+  searchValue: number,
+  callback: MyFilterCallback
+): number[] {
+  const result: number[] = [];
   for (let i = 0; i < arr.length; i++) {
     if (callback(arr[i], searchValue, i, arr)) {
       result.push(arr[i]);

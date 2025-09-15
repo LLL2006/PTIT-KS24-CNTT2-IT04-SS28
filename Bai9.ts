@@ -1,7 +1,7 @@
-type MyMapCallback<T, U> = (element: T, index: number, array: T[]) => U;
+type MyMapCallback = (element: number, index: number, array: number[]) => number;
 
-function myMap<T, U>(arr: T[], callback: MyMapCallback<T, U>): U[] {
-  const result: U[] = [];
+function myMap(arr: number[], callback: MyMapCallback): number[] {
+  const result: number[] = [];
   for (let i = 0; i < arr.length; i++) {
     result.push(callback(arr[i], i, arr));
   }
